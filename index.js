@@ -12,6 +12,9 @@ app.post('/login',async(req,res)=>{
     if(check.length>0){
        res.status(200).send({msg:"User Login in Successfully",data:check})
     }
+    else{
+        res.status(400).send({error:"Not Found"})
+    }
 
 })
 
